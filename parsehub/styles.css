@@ -19,7 +19,7 @@ body {
 .landing {
   width: 500px;
   height: 220px;
-  background-image: url('/static/ph.png'); 
+  background-image: url('./static/ph.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
