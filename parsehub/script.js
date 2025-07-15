@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("http://192.168.1.107:5000");
 
 let currentUser = {
   discordId: null,
@@ -17,14 +17,14 @@ window.onload = async () => {
   const loginBtn = document.getElementById('loginBtn');
 
   // Check login session
-  const userRes = await fetch('/current_user');
+  const userRes = await fetch("http://192.168.1.107:5000/current_user");
   const userData = await userRes.json();
 
   if (userData.logged_in) {
     currentUser.discordId = userData.discord_id;
     currentUser.username = userData.username;
 
-    const balanceRes = await fetch(`/get_user/${currentUser.discordId}`);
+    const balanceRes = await fetch(`http://192.168.1.107/get_user/${currentUser.discordId}`);
     const balanceData = await balanceRes.json();
     currentUser.balance = balanceData.balance;
     currentUser.hasBet = balanceData.has_bet;
@@ -34,7 +34,7 @@ window.onload = async () => {
   // Discord login
   if (!userData.logged_in){
       loginBtn.addEventListener('click', () => {
-      window.location.href = "/login";
+      window.location.href = "http://192.168.1.107:5000/login";
   });
   }
 
