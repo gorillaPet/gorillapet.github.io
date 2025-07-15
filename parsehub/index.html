@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
     <!-- Header Panel -->
 <div class="header_panel">
   <div class="header_container">
-      <img src="/static/parsehub.png" alt="Logo" class="header_logo">
+      <img src="/assets/parsehub.png" alt="Logo" class="header_logo">
 
   <a href="/login">
   <button id="loginBtn" class="login_btn"></button>
