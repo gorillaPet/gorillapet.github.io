@@ -1,0 +1,401 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image: url('bg.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+
+  padding: 40px;
+}
+
+.bet_panel,
+.header_panel,
+.multi_panel {
+  background-color: rgba(29, 29, 29, 0.932);
+  border-radius: 12px;
+  color: white;
+  padding: 20px;
+  max-width: 30%;
+  min-width: 300px;
+  display: flex;
+  border-style: solid;
+  border-color: black;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.bet_panel {
+  position: relative; /* Needed to anchor the button inside it */
+  background-color: rgba(29, 29, 29, 0.932);
+  border-radius: 8%;
+  color: white;
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 28px;
+}
+
+
+#placeBetBtn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  border: none;
+  font-family: "Roboto", sans-serif;
+
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 80%;
+  text-align: center;
+}
+
+
+#placeBetBtn.cashed-out {
+  background-color: #007bff;
+}
+
+#placeBetBtn.wait {
+  background-color: #c0c0c0;
+  color: black;
+  cursor: auto;
+  opacity: 0.9;
+}
+
+#placeBetBtn.stop {
+  background-color: #dc143c;
+}
+
+/* Mult panel with feeds */
+.multi_panel {
+  height: 480px;
+  justify-content: flex-start;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#mult-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+#mult {
+  font-size: 64px;
+  line-height: 100px;
+  height: 100px;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Vertical Feed */
+#feed-container {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to top, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 70%, transparent 100%);
+  padding-top: 10px;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.feed-entry {
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.feed-entry.cash {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.feed-entry.bigwin {
+  color: #ff8000;
+  font-weight: bold;
+}
+
+/* Horizontal Crash Feed */
+#crash-feed-container {
+  height: 30px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  mask-image: linear-gradient(to left, transparent 0%, black 0%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 0%, black 90%, transparent 100%);
+}
+
+#crash-feed {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+
+  white-space: nowrap;
+
+}
+
+.crash-feed-entry {
+  font-size: 16px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.crash-feed-entry.red { color: #bebebe; }
+.crash-feed-entry.green { color: #1eff00; }
+.crash-feed-entry.blue { color: #0070dd; }
+.crash-feed-entry.purple { color: #a335ee; }
+.crash-feed-entry.orange { color: #ff8000; }
+
+#mult.red    { color: #bebebe; }
+#mult.green  { color: #1eff00; }
+#mult.blue   { color: #0070dd; }
+#mult.purple { color: #a335ee; }
+#mult.orange { color: #ff8000; }
+
+
+.bet_panel,
+.header_panel,
+.multi_panel {
+  background-color: rgba(29, 29, 29, 0.932);
+  border-radius: 12px;
+  color: white;
+  padding: 20px;
+  width: 400px;
+  height: 480px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.bet_panel{
+    height: 220px;
+}
+#bet,
+#mult {
+
+  line-height: 1.4;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
+
+#mult {
+    font-size: 75;
+}
+
+#mult {
+  transition: font-size 0.3s ease-in-out;
+}
+
+.header_panel {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  flex-direction: row;
+  color: white;
+  height: 100px;
+  width: 400px;
+
+
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 100%;
+
+}
+
+.header_container {
+    display: flex;
+    gap: 2.5%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+
+}
+.header_panel img {
+    width: 45%;
+    height: auto;
+    padding-top: 5px;
+    height: auto;
+    border-radius: 12px;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.header_panel button {
+
+  background-image: url("/static/disc.jpg");
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 45px;
+  border-radius: 8px;
+  margin-top: 20px;
+
+  align-self: center;
+  align-text: center;
+
+
+}
+
+.header_panel button.logged-in {
+  background-image: none !important;
+  background-color: #444;
+  color: white;
+  width: 150px;
+  font-weight: bold;
+}
+
+/* ======== MOBILE STYLES ( ≤ 800 px ) ======== */
+/* This is pretty much all just AI generated by copy pasting and asking it to make the media queries ======== */
+@media screen and (max-width: 800px) {
+
+  /* Full‑screen phone background */
+  html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background: url('phone_bg.jpg') center / cover no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+
+  /* Main flex container */
+  .main_container{
+    padding: 20px;
+    align-items: center;       /* center panels on phone */
+  }
+
+  /* ------ Override ALL panel dimensions ------ */
+  .bet_panel,
+  .header_panel,
+  .multi_panel{
+    width: 90vw !important;    /* 90 % of viewport width  */
+    max-width: none !important;/* cancel 30 % desktop cap */
+    min-width: 0   !important; /* cancel 300 px desktop   */
+    height: auto  !important;  /* cancel 400/480 desktop  */
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  /* Bet panel tweaks */
+  .bet_panel{
+    font-size: 22px;
+    align-items: center;
+
+    display: flex;
+    position: static;
+
+    flex-direction: column;
+  }
+  #placeBetBtn{
+    font-size: 1em;
+    position: static;
+    padding: 10px 20px;
+    bottom: 16px;
+    left: auto;
+
+    max-width: 90%;
+    display: block;                /* allow margin to work */
+    margin: 20px auto 0 auto;      /* center horizontally, add top spacing */
+  }
+
+  /* Header panel becomes a column */
+  .header_panel{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .header_panel img{
+    width: 60%;
+    margin-bottom: 10px;
+  }
+  .header_panel button{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .header_panel button.logged-in{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Multiplier + feeds */
+  #mult-container{ height: 80px; }
+  #mult{ font-size: 48px; line-height: 80px; }
+
+  #feed-container{
+    height: 200px;
+    padding-top: 5px;
+  }
+  #feed{
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  #crash-feed-container{
+    height: 24px;
+    margin-top: 5px;
+  }
+  .crash-feed-entry{ font-size: 14px; }
+}

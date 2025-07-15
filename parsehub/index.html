@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Crash Game</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+  <div class="main_container">
+
+    <!-- Header Panel -->
+<div class="header_panel">
+  <div class="header_container">
+      <img src="/static/parsehub.png" alt="Logo" class="header_logo">
+
+  <a href="/login">
+  <button id="loginBtn" class="login_btn"></button>
+</a>
+
+  </div>
+
+</div>
+
+
+    <!-- Betting Panel -->
+    <div class="bet_panel">
+      <span id="bet">Good Luck</span>
+      <button id="placeBetBtn">Place Bet</button>
+    </div>
+
+    <!-- Multiplier Panel -->
+    <div class="multi_panel">
+      <div id="mult-container">
+        <div id="mult">-</div>
+      </div>
+
+      <div id="feed-container">
+        <div id="feed"></div>
+      </div>
+
+      <div id="crash-feed-container">
+        <div id="crash-feed"></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
