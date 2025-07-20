@@ -9,3 +9,9 @@
   width: 50%;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+}
