@@ -1,21 +1,22 @@
 html, body {
-  display: flex;
   height: 100%;
   margin: 0;
   background: black;
-  justify-content: center;
-  align-items: center;
 }
+
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;  
-  height: 50vh;  
+  width: 50vw;
+  height: 50vh;
   margin: auto;
   position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .center {
