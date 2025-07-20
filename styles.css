@@ -2,8 +2,10 @@ html, body {
   height: 100%;
   margin: 0;
   background: black;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
 }
-
 
 .container {
   display: flex;
@@ -11,12 +13,6 @@ html, body {
   align-items: center;
   width: 50vw;
   height: 50vh;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .center {
