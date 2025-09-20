@@ -4,17 +4,31 @@
 <meta charset="UTF-8">
 <title>Gorilla Pet</title>
 <style>
-  body, html {
+ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100%;
   }
-/*   .container {
-    position: relative;
-    height: 90%;
-    width: 90%;
-  } */
+body {
+  margin: 0;
+  height: 100vh;           /* full viewport height */
+  display: flex;           /* enable flexbox */
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  background: #111;        /* optional background color */
+}
+
+.container {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  background: white;      
+  border-radius: 20px;    
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); 
+  overflow: hidden;        /* keep content inside rounded box */
+}
+
   video {
     width: 100%;
     height: 100%;
