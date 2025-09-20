@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<title>Video Landing Page</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+    .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+
+    background: url("roses.png") center center / cover no-repeat;
+    opacity: 0;
+    transition: opacity 3s ease;
+    pointer-events: none;
+    }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <video id="introVid" autoplay muted playsinline>
+    <source src="vid.mp4" type="video/mp4">
+  </video>
+  <div id="overlay" class="overlay"></div>
+</div>
+
+<script>
+  const video = document.getElementById('introVid');
+  const overlay = document.getElementById('overlay');
+  const durationBuffer = 1.3; 
+
+  
+video.addEventListener('timeupdate', () => {
+  if (video.duration - video.currentTime <= durationBuffer) {
+    overlay.style.opacity = 1; 
+  }
+});
+
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <title>Gorilla Pet</title>
     <link rel="stylesheet" href="styles.css">
