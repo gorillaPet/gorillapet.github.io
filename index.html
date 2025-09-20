@@ -16,7 +16,7 @@ body {
   display: flex;           /* enable flexbox */
   justify-content: center; /* horizontal centering */
   align-items: center;     /* vertical centering */
-  background: #111;        /* optional background color */
+  background-image: url('roses.png');
 }
 
 .container {
@@ -67,18 +67,18 @@ body {
   <video id="introVid" autoplay muted playsinline>
     <source src="vid.mp4" type="video/mp4">
   </video>
-  <div id="overlay" class="overlay"></div>
+ 
 </div>
 
 <script>
   const video = document.getElementById('introVid');
-  const overlay = document.getElementById('overlay');
+ 
   const durationBuffer = 1.6; 
 
   
 video.addEventListener('timeupdate', () => {
   if (video.duration - video.currentTime <= durationBuffer) {
-    overlay.style.opacity = 1; 
+    video.style.opacity = 0; 
   }
 });
 
