@@ -4,15 +4,18 @@
 <meta charset="UTF-8">
 <title>Gorilla Pet</title>
 
-<style>
+ <!-- maybe put all this as a css doc at some point -->
+<style> 
   body {
     background-color: black;
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
   }
 
-  h1,h3 {
+  h1, h3 {
     color: rgb(196, 43, 43);
   }
 
@@ -24,29 +27,92 @@
   a:hover {
     text-decoration: underline;
   }
+
+  /* Image */
+  .profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile img {
+    border-radius: 180px;
+    height: 150px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .profile img:hover {
+    transform: scale(1.05);
+  }
+
+ 
+
+ 
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .profile img {
+      height: 100px;
+    }
+
+    body {
+      font-size: 0.9rem;
+    }
+  }
+
+
+  @media (min-width: 481px) and (max-width: 900px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    .profile img {
+      height: 200px;
+    }
+
+    body {
+      font-size: 1rem;
+    }
+  }
+
+
+  @media (min-width: 901px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .profile img {
+      height: 280px;
+    }
+
+    body {
+      font-size: 1.1rem;
+    }
+  }
 </style>
 </head>
+
 <body>
 
 <h1>gorillaPet</h1>
-<div style="display: inline-flex; align-items: center; justify-content: center;">
-  <img src="sonofkong.png" alt="Image" style="border-radius: 180px; height: 150px; width: auto;">
+
+<div class="profile">
+  <img src="sonofkong.png" alt="Image">
 </div>
 
-<p>
-    Home of the pet gorilla.
-</p>
-
+<p>Home of the pet gorilla.</p>
 <p>gorillapet@proton.me</p>
+
 <br><br>
-<h3>Projects</h3>
+<h3>projects</h3>
+
 <a href="https://github.com/gorillaPet/">github</a><br><br>
-
-<a href="dnd">3.5e Character Sheet</a>   <br><br>
-
-<a href="physics">Physics</a>  <br><br>
-
-<a href="https://www.parsehub.online">Parsehub Casino</a>  <br>
+<a href="dnd">3.5e Character Sheet</a><br><br>
+<a href="physics">Physics</a><br><br>
+<a href="https://www.parsehub.online">Parsehub Casino</a><br>
 
 </body>
 </html>
