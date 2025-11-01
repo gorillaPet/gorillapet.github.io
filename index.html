@@ -3,76 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Gorilla Pet</title>
-<style>
-  html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;
-  }
-  body {
-    margin: 0;
-    height: 100vh;           /* full viewport height */
-    display: flex;           /* enable flexbox */
-    justify-content: center; /* horizontal centering */
-    align-items: center;     /* vertical centering */
-    background: #111;        /* fallback background */
-  }
 
-  .container {
-    position: relative;
-    width: 75vw;
-    height: 75vw;
-    background: black;      
-    border-radius: 20px;    
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3); 
-    overflow: hidden;        /* keep content inside rounded box */
-  }
-
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: opacity 1.5s ease;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    height: 100%; 
-    width: 100%;
-    background: url("roses.png") center center / cover no-repeat;
-    opacity: 0;
-    transition: opacity 1.5s ease;
-    pointer-events: none;
-  }
-</style>
 </head>
 <body>
-  <div class="container">
-    <video id="introVid" autoplay muted playsinline>
-      <source src="vid.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
-  </div>
 
-  <script>
-    const video = document.getElementById('introVid');
-    const overlay = document.querySelector('.overlay');
-    const durationBuffer = 1.6; 
-
-    video.addEventListener('timeupdate', () => {
-      if (video.duration - video.currentTime <= durationBuffer) {
-        video.style.opacity = 0;
-        overlay.style.opacity = 1; // fade in roses
-      }
-    });
-
-    video.addEventListener('ended', () => {
-      video.style.display = "none"; // remove video box after fade
-    });
-  </script>
 </body>
 </html>
