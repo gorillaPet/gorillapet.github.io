@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>robo rover</title>
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="project-card">
+
+        <h2>robo rover</h2>
+
+        <div class="project-row">
+
+            <img
+                class="project-image"
+                src="rover_front.jpg"
+                alt="rover">
+
+            <div class="project-text">
+
+                <p>
+                    I recently got a free PXN V3 Pro using my Telstra points, so I thought why not use it to drive my little Mbot Ranger around?
+                    I should be able to take the 16-bit steering axis inputs and convert them to serial comms, then using that to spin the corresponding wheel for a turn. 
+                    I might create a simplified prototype version with the Mblock IDE, but I assume that would only take binary inputs, ultimately I'll be writing it in C to upload to using the Arduino IDE. 
+  
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-row">
+
+            <div class="project-text">
+
+                <p>
+                The GUI on the other hand will be tkinter, with a input map, pitch and yaw diagram, and a live video stream. What I really want is to create an immersive "rover" type program, so I will implement the live
+                screen with an VLC frame and use an IP streaming app on a spare phone to be the rover's eyes. I don't plan at this stage to automate anything - this really was just an explore bot to make use of the wheel, but there's 
+                definitely scope to expand on some of the computation intelligence/robotics fundamentals using the ultrasonic sensor and inbuilt gyro.  
+                </p>
+
+            </div>
+
+            <img
+                class="project-image"
+                src="rover_side.jpg"
+                alt="rover">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

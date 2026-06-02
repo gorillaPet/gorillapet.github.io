@@ -1,230 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Gorilla Pet</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>rust slot machine</title>
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="stylesheet">
 
 </head>
+
 <body>
 
-<h1>rust casino</h1>
+<div class="container">
 
+    <div class="project-card">
+
+        <h2>rust slot machine</h2>
+
+        <div class="project-row">
+
+            <img
+                class="project-image"
+                src="rust_front.jpg"
+                alt="system">
+
+            <div class="project-text">
+
+                <p>
+                    When I started studying CS 2.5 years ago, it was so I could make more technically impressive ways of annoying my friends. Coding for me started out accidentally learning some python to script a visual romance novel starring my buddy Jake, 
+                    and for better or for worse it snowballed to the point where I now know what Gram-Schmidt orthogonalisation is. I'm definitely a lot better at thinking about systems and flow control, so while the rust slot machine isn't pure CS, it's my magnum
+                    opus and the logical conclusion of my study. Using the inbuilt electronics system in the game Rust, I managed to design, on a live PvP server mind you, a fully functional single line
+                    slot machine with a variable pay table.  
+               </a>
+
+  
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-row">
+
+            <div class="project-text">
+
+                <p>I played Rust in 2020 and loved the electronics, but anything short of a sun activated light switch was pure magic to me. Coming back this year, I realised that the game has both XOR and AND gates, as well as Rand and bitflop switches
+                    Pairing this with the custom neon signs, and the automated resource dispensers, I managed to make a system whereby you place money in the box, the system activates, waits for a button push, then begins the Rand process.
+                With some pretty crude if else logic, I managed to create a series of more or less likely symbols with 3 of the rarer symbols paying out a higher amount. I would love to post a video, however as a thank you for enriching the server, upon completion 
+                a kindly gentleman flew over my base in a scrap metal helicopter and blew the casino up with a rocket launcher. And people say Rust is toxic?!
+                </p>
+
+            </div>
+
+            <img
+                class="project-image"
+                src="rust_side.jpg"
+                alt="system">
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-</head>
-
-<title>gorillaPet</title>
-
- <!-- maybe put all this as a css doc at some point -->
-<style> 
-
-
-
-  .press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  }
-
-  body {
-    background-color: black;
-    background-image: url("Untitled.jpg");
-    background-repeat: repeat;
-    background-size: 10%;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 1rem;
-  }
-
-  h1, h2, h3 {
-    color: #F6FF00;
-    font-family: "Press Start 2P", system-ui;
-    -webkit-text-stroke: 1px red;
-
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  a:hover {
-    /* text-decoration: underline; */
-    /* font-family: "Press Start 2P", system-ui; */
-    
-  }
-
-  /* Image */
-  .profile {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .profile img, .head img {
-    border-radius: 16px;
-    border-color: rgb(196, 43, 43); 
-    height: 150px;
-    width: auto;
-    transition: transform 0.3s ease;
-  }
-
-  .head img {
-    display: block;
-    margin: 0 auto; 
-    margin-bottom: 0;
-  }
-
-  p {margin-top: 0;}
-
-
-
-  /* .profile img:hover {       might be cool if i want to make it a button
-    transform: scale(1.05);
-  } */
-
- 
-
- /* phone */
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    .profile img {
-      height: 100px;
-    }
-
-    body {
-      font-size: 0.9rem;
-    }
-    a:hover {
-        font-size: 1.2rem;
-    }
-  .email {
-    position: relative;
-    top: -20px;
-  }
-  }
-
-/* tablet */
-  @media (min-width: 481px) and (max-width: 900px) {
-    h1 {
-      font-size: 2.4rem;
-    }
-
-    .profile img {
-      height: 200px;
-    }
-
-    body {
-      font-size: 1rem;
-    }
-    a:hover {
-        font-size: 1.3rem;
-    }   
-  }
-
-/* desktop */
-  @media (min-width: 901px) {
-    h1 {
-      font-size: 3rem;
-    }
-
-    .profile img {
-      height: 280px;
-    }
-    .head img {
-      margin-top: 15px;
-      height: 400px;
-      width: auto;
-    }
-
-
-    body {
-      font-size: 1.1rem;
-    }
-    a:hover {
-        font-size: 1.2rem;
-    }
-
-  .email {
-    position: relative;
-    top: -100px;
-  }
-
-.projects-section {
-    position: relative;
-    top: -70px;
-  }
-.header-section {
-  padding-top: 200px;
-}
-
-  }
-
-  /* comment out when using piclogo */
-  /* .head img {
-    height: 90%;
-    width: 90%;
-  } */
-
-
-  /* ticker code */
-
-  .ticker {
-    position: relative;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: "Press Start 2P", monospace;
-    font-size: 18px;
-    color: red;
-    padding: 5px 0;
-    margin-top: 0;
-  }
-
-  .yellow {
-    position: fixed;
-    background-color: #000000; 
-    top: 0;
-    
-  }
-
-  .green {
-    position: fixed;
-    background-color: #000000;
-    bottom: 0; 
-  }
-  .scroll {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 95s linear infinite;
-  }
-  .scroll2 {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 120s linear infinite;
-  }
-
-  @keyframes scroll-left {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-  }
-
-</style>
-
 </html>

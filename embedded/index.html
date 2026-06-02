@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>embedded systems</title>
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="project-card">
+
+        <h2>embedded projects</h2>
+
+        <div class="project-row">
+
+            <img
+                class="project-image"
+                src="med_front.jpg"
+                alt="system">
+
+            <div class="project-text">
+
+                <p>
+                    "Medispense" was an embedded systems project for a level-200 unit that I made using a 3d printed dispenser, raspberry pi, and a servo. While it wasn't especially inspired, it was my first attempt at something using an actual GUI alongside an embedded project, rather than just terminal/serial IO. The client can set a dosage schedule using the GUI, 
+                    and once the medication is due, the client can dispense the meds using either the push button, or the on screen UI. The system was also built to trigger an email webhook, so that the patient receives warning when a dosage is coming up, or if the 
+                    meds are overdue. While I wouldn't want to overengineer something like this with client proximity sensors or the like, there is an obvious shortcoming in the prototype in that it is only equipped to dispense using a quick retraction of a servo motor. 
+                    In practice, this doesn't allow for much precision, and would benefit from internal weight/IR measurement sensors, or a more mechanical twist style system to ensure patients can load multiple doses but only have one dispensed. 
+                      <a href="https://www.youtube.com/watch?v=Xk1alkbLQ_0" style="color: yellow;">check it out</a>
+
+  
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-row">
+
+            <div class="project-text">
+
+                <p>
+                People hate tkinter but I think it's neat. It doesn't have to look like shovelware from 1996. (See, this looks like shovelware from 2001!)
+                </p>
+
+            </div>
+
+            <img
+                class="project-image"
+                src="med_side.jpg"
+                alt="system">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
