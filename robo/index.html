@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../styles.css">
 
-    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,20 +28,28 @@
 
         <h2>robo rover</h2>
 
+        <div class="tags">
+            <span class="tag">c / arduino ide</span>
+            <span class="tag">mbot ranger</span>
+            <span class="tag">serial comms</span>
+            <span class="tag">tkinter</span>
+            <span class="tag">python-vlc</span>
+            <span class="tag">rtsp streaming</span>
+            <span class="tag">hid / joystick</span>
+        </div>
+
         <div class="project-row">
 
             <img
                 class="project-image"
                 src="rover_front.jpg"
-                alt="rover">
+                alt="robo rover"
+                onclick="openLightbox(this.src)">
 
             <div class="project-text">
 
                 <p>
-                    I recently got a free PXN V3 Pro using my Telstra points, so I thought why not use it to drive my little Mbot Ranger around?
-                    I should be able to take the 16-bit steering axis inputs and convert them to serial comms, then using that to spin the corresponding wheel for a turn. 
-                    I might create a simplified prototype version with the Mblock IDE, but I assume that would only take binary inputs, ultimately I'll be writing it in C to upload to using the Arduino IDE. 
-  
+                    I recently scored a PXN V3 Pro racing wheel on Telstra points, so I thought — why not use it to drive my MBot Ranger around? The plan is to read the wheel's 16-bit steering axis inputs and convert them to differential drive commands over serial, spinning each wheel proportionally for smooth variable-speed turns. I might knock up a quick prototype in the MBlock IDE first, but that only handles binary steering, so ultimately I'll write it in C and flash it via the Arduino IDE.
                 </p>
 
             </div>
@@ -53,9 +61,7 @@
             <div class="project-text">
 
                 <p>
-                The GUI on the other hand will be tkinter, with a input map, pitch and yaw diagram, and a live video stream. What I really want is to create an immersive "rover" type program, so I will implement the live
-                screen with an VLC frame and use an IP streaming app on a spare phone to be the rover's eyes. I don't plan at this stage to automate anything - this really was just an explore bot to make use of the wheel, but there's 
-                definitely scope to expand on some of the computation intelligence/robotics fundamentals using the ultrasonic sensor and inbuilt gyro.  
+                    The GUI will be Tkinter: an input map, a pitch/yaw diagram, and a live video feed. The feed will be a python-vlc frame pulling an RTSP stream from an IP camera app on a spare phone — the rover's eyes. The goal is something that actually feels immersive, not just watching a robot trundle around a room. No autonomy planned at this stage, this was really just an excuse to make use of the wheel — but there's real scope to build on the MBot's ultrasonic sensor and onboard gyroscope once the remote control loop is solid.
                 </p>
 
             </div>
@@ -63,13 +69,21 @@
             <img
                 class="project-image"
                 src="rover_side.jpg"
-                alt="rover">
+                alt="robo rover"
+                onclick="openLightbox(this.src)">
 
         </div>
 
     </div>
 
 </div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="../lightbox.js"></script>
 
 </body>
 </html>

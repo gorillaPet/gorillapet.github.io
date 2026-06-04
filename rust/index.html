@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../styles.css">
 
-    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,23 +28,26 @@
 
         <h2>rust slot machine</h2>
 
+        <div class="tags">
+            <span class="tag">in-game electronics</span>
+            <span class="tag">logic gates</span>
+            <span class="tag">rand switches</span>
+            <span class="tag">bitflops</span>
+            <span class="tag">combinational logic</span>
+        </div>
+
         <div class="project-row">
 
             <img
                 class="project-image"
                 src="rust_front.jpg"
-                alt="system">
+                alt="rust slot machine"
+                onclick="openLightbox(this.src)">
 
             <div class="project-text">
 
                 <p>
-                    When I started studying CS 2.5 years ago, it was so I could make more technically impressive ways of annoying my friends. Coding for me started out accidentally learning some python to script a visual romance novel starring my buddy Jake, 
-                    and for better or for worse it snowballed to the point where I now know what Gram-Schmidt orthogonalisation is. I'm definitely a lot better at thinking about systems and flow control, so while the rust slot machine isn't pure CS, it's my magnum
-                    opus and the logical conclusion of my study. Using the inbuilt electronics system in the game Rust, I managed to design, on a live PvP server mind you, a fully functional single line
-                    slot machine with a variable pay table.  
-               </a>
-
-  
+                    When I started studying CS 2.5 years ago, it was so I could make more technically impressive ways of annoying my friends. It started out accidentally learning some Python to script a visual romance novel starring my buddy Jake, and for better or for worse it snowballed to the point where I now know what Gram-Schmidt orthogonalisation is. I'm definitely a lot better at thinking about systems and flow control — and while the Rust slot machine isn't pure CS, it's my magnum opus and the logical conclusion of my study. Using the in-built electronics system in the game Rust, I designed, on a live PvP server mind you, a fully functional single-line slot machine with a variable pay table.
                 </p>
 
             </div>
@@ -55,10 +58,8 @@
 
             <div class="project-text">
 
-                <p>I played Rust in 2020 and loved the electronics, but anything short of a sun activated light switch was pure magic to me. Coming back this year, I realised that the game has both XOR and AND gates, as well as Rand and bitflop switches
-                    Pairing this with the custom neon signs, and the automated resource dispensers, I managed to make a system whereby you place money in the box, the system activates, waits for a button push, then begins the Rand process.
-                With some pretty crude if else logic, I managed to create a series of more or less likely symbols with 3 of the rarer symbols paying out a higher amount. I would love to post a video, however as a thank you for enriching the server, upon completion 
-                a kindly gentleman flew over my base in a scrap metal helicopter and blew the casino up with a rocket launcher. And people say Rust is toxic?!
+                <p>
+                    I played Rust back in 2020 and loved the electronics system, but anything beyond a sun-activated light switch was pure magic to me. Coming back recently, I realised the game has XOR and AND gates, Rand switches, and bitflop latches. Paired with the custom neon signs and automated resource dispensers, I had just enough to build something real. Drop money in the input box, the circuit activates, waits for a button press, then kicks off the Rand sequence. Some crude if-else logic assigns symbol probabilities — common symbols appear more often, and three of the rarer ones pay out a higher multiplier. I would love to post a video, but as a thank you for enriching the server economy, a kindly gentleman flew over my base in a scrap helicopter and blew the casino up with a rocket launcher. And people say Rust is toxic?!
                 </p>
 
             </div>
@@ -66,13 +67,21 @@
             <img
                 class="project-image"
                 src="rust_side.jpg"
-                alt="system">
+                alt="rust slot machine"
+                onclick="openLightbox(this.src)">
 
         </div>
 
     </div>
 
 </div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="../lightbox.js"></script>
 
 </body>
 </html>

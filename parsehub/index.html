@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>robo rover</title>
+    <title>parsehub casino</title>
 
     <link rel="stylesheet" href="../styles.css">
 
-    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,19 +28,28 @@
 
         <h2>parsehub casino</h2>
 
+        <div class="tags">
+            <span class="tag">python</span>
+            <span class="tag">flask</span>
+            <span class="tag">discord.py</span>
+            <span class="tag">sqlite</span>
+            <span class="tag">oauth2</span>
+            <span class="tag">numpy</span>
+            <span class="tag">vps</span>
+        </div>
+
         <div class="project-row">
 
             <img
                 class="project-image"
                 src="ph_front.jpg"
-                alt="rover">
+                alt="parsehub casino"
+                onclick="openLightbox(this.src)">
 
             <div class="project-text">
 
                 <p>
-                    My WoW guild love the in game gambling addon, so I thought it could be fun for my first actual project to create an Aviator style gambling game that I could manage using a discord bot. This was the first flask app I built, and I specifically 
-                    wanted to utilise OAuth, use a database to store credit balance, and I wanted it all to run using /commands in discord. 
-  
+                    My WoW guild love the in-game gambling addon, so I thought it could be fun for my first real project to create an Aviator-style gambling game I could manage using a Discord bot. This was the first Flask app I built — I specifically wanted to use Discord OAuth2 for login, SQLite to store credit balances, and have the whole thing run off slash commands.
                 </p>
 
             </div>
@@ -52,10 +61,7 @@
             <div class="project-text">
 
                 <p>
-                I used the probabalistic distribution function from numpy to generate a random number centered at 1.3, which seemed to be the sweet spot. Then everyone got bored of playing for fake coins, so I jacked it up to around 5-6 so we could have some huge games. 
-                Players register using /register and can login on the website using their discord account. Each player can bet during the betting window, and if they cash out before the "crash", they get their bet back multiplied by the cash out number. This is riddled
-                with design flaws, UI bugs, and some massive security concerns (can a user invite a bot to their own server and update the centralised database? probably), but it was a really fun project and the guys seemed to enjoy it. It's also hosted on my VPS which has 
-                since become the place I keep/host most of my projects and sites, so well worth it. <a href="https://parsehub.online" style="color: yellow;">check it out</a>
+                    I used NumPy's probabilistic distribution to generate a crash multiplier centred at 1.3x, which seemed like the sweet spot — until everyone got bored playing for fake coins, so I jacked it up to 5–6x for some properly dramatic rounds. Players register with /register, authenticate via their Discord account, and place bets during the open window. Cash out before the crash and you get your bet back multiplied by whatever the number reads at that moment. This is riddled with design flaws, UI bugs, and at least one glaring security issue (can a user run their own bot instance and write to the centralised database? probably), but it was a really fun first crack at tying a web app to a chat platform, and the guys seemed to enjoy it. Hosted on my VPS, which has since become the place I keep most of my projects and sites. <a href="https://parsehub.online" style="color: yellow;">check it out</a>
                 </p>
 
             </div>
@@ -63,13 +69,21 @@
             <img
                 class="project-image"
                 src="ph_side.jpg"
-                alt="rover">
+                alt="parsehub casino"
+                onclick="openLightbox(this.src)">
 
         </div>
 
     </div>
 
 </div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="../lightbox.js"></script>
 
 </body>
 </html>

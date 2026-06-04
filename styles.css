@@ -150,11 +150,82 @@ p {
     width: 250px;
     border-radius: 20px;
     border: 2px solid white;
+    cursor: zoom-in;
+    transition: opacity 0.15s, border-color 0.15s;
+}
+
+.project-image:hover {
+    opacity: 0.85;
+    border-color: #F6FF00;
 }
 
 .project-text {
     flex: 1;
     text-align: left;
+}
+
+/* Tags */
+
+.tags {
+    margin-bottom: 16px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 10px;
+    color: #aaa;
+    border: 1px solid #444;
+    padding: 2px 7px;
+    margin: 2px 3px 2px 0;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    text-shadow: none;
+}
+
+/* Lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.93);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    padding: 24px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: min(90vw, 1000px);
+    max-height: 85vh;
+    object-fit: contain;
+    border: 2px solid white;
+    border-radius: 12px;
+    display: block;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 28px;
+    color: #aaa;
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
+    font-family: Arial, sans-serif;
+    text-shadow: none;
+    transition: color 0.15s;
+}
+
+.lightbox-close:hover {
+    color: white;
 }
 
 /* Phone */

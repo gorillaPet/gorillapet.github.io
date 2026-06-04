@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>hospital route finder</title>
+    <title>hospital route optimiser</title>
 
     <link rel="stylesheet" href="../styles.css">
 
-    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,21 +26,29 @@
 
     <div class="project-card">
 
-        <h2>hospital route finder</h2>
+        <h2>hospital route optimiser</h2>
+
+        <div class="tags">
+            <span class="tag">react native</span>
+            <span class="tag">google maps api</span>
+            <span class="tag">directions api</span>
+            <span class="tag">places api</span>
+            <span class="tag">node.js</span>
+            <span class="tag">ios / android</span>
+        </div>
 
         <div class="project-row">
 
             <img
                 class="project-image"
                 src="hospital_front.jpg"
-                alt="rover">
+                alt="hospital route optimiser"
+                onclick="openLightbox(this.src)">
 
             <div class="project-text">
 
                 <p>
-                    My girlfriend is a paramedic, and apparently at night if someone gets injured, they have a massive excel spreadsheet to see what hospitals are open. 
-                    She's asked me to make her an app so that she can just put her location, the department requirements (cardiac, neuro, spinal etc.) and have a sorted list of hospitals that offer those services,with the oncall number if it's late. 
-  
+                    My girlfriend is a paramedic, and apparently at night when someone comes in, they're working off a shared Excel spreadsheet to figure out which hospitals have the right department open. She asked me to build an app: enter your location, specify the department (cardiac, neuro, spinal, etc.), and get back a ranked list of hospitals that can handle it — with the on-call number if it's after hours.
                 </p>
 
             </div>
@@ -52,9 +60,7 @@
             <div class="project-text">
 
                 <p>
-                This will be a good opportunity to play around with the google maps API, and learn some iOS and Android dev. It seems trivial to return a sorted list of JSON items, but there's a few things to consider when it comes to API calls for the live traffic data without
-                completely blowing the free monthy allowance. This will be especially important as she's told me that it will be useful for some of her colleagues who regularly work cross region - even during the day if you're working across the other side of Melbourne it 
-                would be good to know what's close. 
+                    Returning a sorted JSON list is pretty straightforward, but there are a few things to think about when it comes to live traffic data without blowing the free monthly quota on the Maps API. The plan is to use the Places API for an initial proximity filter, then only fire Directions API calls against the shortlist. Cross-region use is also a real requirement — paramedics covering the far side of Melbourne need this to be useful too, not just the nearest suburb. Building in React Native so it runs on both iOS and Android without maintaining two separate codebases.
                 </p>
 
             </div>
@@ -62,13 +68,21 @@
             <img
                 class="project-image"
                 src="hospital_side.jpg"
-                alt="rover">
+                alt="hospital route optimiser"
+                onclick="openLightbox(this.src)">
 
         </div>
 
     </div>
 
 </div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="../lightbox.js"></script>
 
 </body>
 </html>
