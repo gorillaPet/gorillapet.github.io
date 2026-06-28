@@ -1,88 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>hospital route optimiser</title>
-
-    <link rel="stylesheet" href="../styles.css">
-
-    <link rel="icon" type="image/x-icon" href="../favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hospital route optimiser — Nick McCallum</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
-
 <body>
-
-<div class="container">
-
-    <div class="project-card">
-
-        <h2>hospital route optimiser</h2>
-
-        <div class="tags">
-            <span class="tag">react native</span>
-            <span class="tag">google maps api</span>
-            <span class="tag">directions api</span>
-            <span class="tag">places api</span>
-            <span class="tag">node.js</span>
-            <span class="tag">ios / android</span>
-        </div>
-
-        <div class="project-row">
-
-            <img
-                class="project-image"
-                src="hospital_front.jpg"
-                alt="hospital route optimiser"
-                onclick="openLightbox(this.src)">
-
-            <div class="project-text">
-
-                <p>
-                    My girlfriend is a paramedic, and apparently at night when someone comes in, they're working off a shared Excel spreadsheet to figure out which hospitals have the right department open. She asked me to build an app: enter your location, specify the department (cardiac, neuro, spinal, etc.), and get back a ranked list of hospitals that can handle it - with the on-call number if it's after hours.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-text">
-
-                <p>
-                    Returning a sorted JSON list is pretty straightforward, but there are a few things to think about when it comes to live traffic data without blowing the free monthly quota on the Maps API. The plan is to use the Places API for an initial proximity filter, then only fire Directions API calls against the shortlist. Cross-region use is also a real requirement - paramedics covering the far side of Melbourne need this to be useful too, not just the nearest suburb. Building in React Native so it runs on both iOS and Android without maintaining two separate codebases.
-                </p>
-
-            </div>
-
-            <img
-                class="project-image"
-                src="hospital_side.jpg"
-                alt="hospital route optimiser"
-                onclick="openLightbox(this.src)">
-
-        </div>
-
+<div class="ticker" aria-hidden="true"><div class="ticker-inner" id="t1"></div></div>
+<nav>
+  <span class="nav-logo"><span class="at">~/</span>nick</span>
+  <ul class="nav-links">
+    <li><a href="../index.html">← back</a></li>
+    <li><a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin ↗</a></li>
+  </ul>
+</nav>
+<div class="section">
+  <a class="back-link" href="../index.html">← all projects</a>
+  <div class="project-page-card">
+    <h1>hospital route optimiser <span class="badge wip" style="font-size:11px;vertical-align:middle;">wip</span></h1>
+    <div class="tags">
+      <span class="tag">react native</span><span class="tag">google maps api</span><span class="tag">directions api</span><span class="tag">places api</span><span class="tag">node.js</span><span class="tag">ios / android</span>
     </div>
-
+    <div class="img-row">
+      <img src="hospital_front.jpg" alt="hospital route optimiser front" onclick="openLightbox(this.src)" />
+      <img src="hospital_side.jpg" alt="hospital route optimiser side" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="prose">
+      <p>My girlfriend is a paramedic, and apparently at night when someone comes in, they're working off a shared Excel spreadsheet to figure out which hospitals have the right department open. She asked me to build an app: enter your location, specify the department (cardiac, neuro, spinal, etc.), and get back a ranked list of hospitals that can handle it — with the on-call number if it's after hours.</p>
+      <p>Returning a sorted JSON list is pretty straightforward, but there are a few things to think about when it comes to live traffic data without blowing the free monthly quota on the Maps API. The plan is to use the Places API for an initial proximity filter, then only fire Directions API calls against the shortlist. Cross-region use is also a real requirement — paramedics covering the far side of Melbourne need this to be useful too, not just the nearest suburb. Building in React Native so it runs on both iOS and Android without maintaining two separate codebases.</p>
+    </div>
+  </div>
 </div>
-
+<div class="ticker bottom" aria-hidden="true"><div class="ticker-inner" id="t2"></div></div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
-    <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+  <img id="lightbox-img" src="" alt="" />
 </div>
-
 <script src="../lightbox.js"></script>
-
+<script>
+  const w = ["Forest forget who is first born。","The ape walk but step is missing。","Heaven not ready yet。","He who stare too deep in gorilla mind become not who was before。","The ape teach forgetting but remember confuse itself。","Only blind can see the far close。","Time skip beat。","Before banana there only thought of maybe hunger。","Gorilla shadow too long for today to finish。","Wisdom walk in wrong direction。"].join(" · ");
+  document.getElementById('t1').textContent = w + " · " + w;
+  document.getElementById('t2').textContent = w + " · " + w;
+</script>
 </body>
 </html>

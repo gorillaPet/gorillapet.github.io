@@ -1,81 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>gorillaPet</title>
-
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nick McCallum</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<div class="ticker yellow">
-    <div class="scroll" id="scrollTextTop"></div>
-</div>
 
-<div class="ticker green">
-    <div class="scroll2" id="scrollTextBottom"></div>
-</div>
 
-<script src="ticker.js"></script>
+<!-- Nav -->
+<nav>
+  <span class="nav-logo"><span class="at">~/</span>nick</span>
+  <ul class="nav-links">
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin ↗</a></li>
+  </ul>
+</nav>
 
-<div class="container">
+<!-- Hero -->
+<section id="hero">
+  <p class="hero-mono">// cs student &amp; hobbyist builder</p>
+  <h1>Hey, I'm <span>Nick</span>.</h1>
+  <p class="hero-bio">
+    I started studying CS 2.5 years ago so I could build <strong>more technically impressive ways of annoying my friends.</strong>
+    It snowballed. Now I know what Gram–Schmidt orthogonalisation is and I have a VPS.
+    These days I work on things that are useful, occasionally things that are funny, and sometimes both at once.
+  </p>
+  <div class="hero-links">
+    <a class="pill accent" href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">
+      <!-- LinkedIn icon -->
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <a class="pill" href="https://github.com/gorillaPet" target="_blank" rel="noopener">
+      <!-- GitHub icon -->
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      GitHub
+    </a>
+    <a class="pill" href="mailto:gorillapet@proton.me">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+      gorillapet@proton.me
+    </a>
+  </div>
+</section>
 
-    <div class="header-section">
+<hr class="divider" />
 
-        <div class="head">
-            <img src="logovar2.svg" alt="gorillaPet">
+<!-- Projects -->
+<section class="section" id="projects">
+  <p class="section-label reveal">Projects</p>
+
+  <div class="project-list reveal">
+
+    <!-- Parsehub Casino -->
+    <a class="project-item" href="parsehub/index.html">
+      <div>
+        <div class="project-name">parsehub casino</div>
+        <div class="project-desc">Aviator-style Discord gambling bot for my WoW guild. Flask web app, Discord OAuth2 login, SQLite for credit balances, NumPy probability distributions. Hosted on my VPS.</div>
+        <div class="project-tags">
+          <span class="tag">python</span>
+          <span class="tag">flask</span>
+          <span class="tag">discord.py</span>
+          <span class="tag">sqlite</span>
+          <span class="tag">oauth2</span>
+          <span class="tag">numpy</span>
+          <span class="tag">vps</span>
         </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
 
-        <p class="email">
-            gorillapet@proton.me
-        </p>
+    <!-- Rust Slot Machine -->
+    <a class="project-item" href="rust/index.html">
+      <div>
+        <div class="project-name">rust slot machine</div>
+        <div class="project-desc">Fully functional single-line slot machine built inside the game Rust using its in-game electronics: XOR/AND gates, Rand switches, bitflop latches, and neon signs. My magnum opus.</div>
+        <div class="project-tags">
+          <span class="tag">logic gates</span>
+          <span class="tag">rand switches</span>
+          <span class="tag">bitflops</span>
+          <span class="tag">combinational logic</span>
+          <span class="tag">in-game electronics</span>
+        </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
 
-    </div>
+    <!-- Embedded Systems -->
+    <a class="project-item" href="embedded/index.html">
+      <div>
+        <div class="project-name">embedded systems — medispense</div>
+        <div class="project-desc">3D-printed medication dispenser with a Raspberry Pi, GPIO-wired push button, Tkinter GUI, servo, and SMTP email alerts for missed doses.</div>
+        <div class="project-tags">
+          <span class="tag">raspberry pi</span>
+          <span class="tag">python</span>
+          <span class="tag">tkinter</span>
+          <span class="tag">gpio</span>
+          <span class="tag">servo</span>
+          <span class="tag">3d printing</span>
+          <span class="tag">smtp</span>
+        </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
 
-    <div class="projects-section">
+    <!-- Robo Rover WIP -->
+    <a class="project-item wip" href="robo/index.html">
+      <div>
+        <div class="project-name">
+          robo rover
+          <span class="badge wip">wip</span>
+        </div>
+        <div class="project-desc">Racing wheel–controlled MBot Ranger rover with differential steering over serial, Tkinter GUI with live RTSP camera feed from a spare phone, and a pitch/yaw diagram.</div>
+        <div class="project-tags">
+          <span class="tag">c / arduino ide</span>
+          <span class="tag">serial comms</span>
+          <span class="tag">tkinter</span>
+          <span class="tag">python-vlc</span>
+          <span class="tag">rtsp</span>
+          <span class="tag">hid / joystick</span>
+        </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
 
-        <h2>projects</h2>
+    <!-- Hospital Route WIP -->
+    <a class="project-item wip" href="hospital/index.html">
+      <div>
+        <div class="project-name">
+          hospital route optimiser
+          <span class="badge wip">wip</span>
+        </div>
+        <div class="project-desc">React Native app for paramedics: enter location + department, get a ranked list of hospitals with capacity and on-call numbers. Places API pre-filters before Directions API calls.</div>
+        <div class="project-tags">
+          <span class="tag">react native</span>
+          <span class="tag">google maps api</span>
+          <span class="tag">node.js</span>
+          <span class="tag">ios / android</span>
+        </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
 
-        <a href="https://github.com/gorillaPet/">github</a>
-        <br><br>
+  </div>
+</section>
 
-        <a href="parsehub/index.html">parsehub casino</a>
-        <br><br>
+<hr class="divider" />
 
-        <a href="rust/index.html">rust slot machine</a>
-        <br><br>
+<!-- Skills -->
+<section class="section" id="skills">
+  <p class="section-label reveal">Skills &amp; tools</p>
+  <div class="skills-grid reveal">
+    <div class="skill-chip"><span class="dot"></span>Python</div>
+    <div class="skill-chip"><span class="dot"></span>Flask</div>
+    <div class="skill-chip"><span class="dot slate"></span>React Native</div>
+    <div class="skill-chip"><span class="dot slate"></span>Node.js</div>
+    <div class="skill-chip"><span class="dot slate"></span>JavaScript</div>
+    <div class="skill-chip"><span class="dot"></span>SQLite</div>
+    <div class="skill-chip"><span class="dot"></span>C / Arduino</div>
+    <div class="skill-chip"><span class="dot green"></span>Raspberry Pi</div>
+    <div class="skill-chip"><span class="dot green"></span>GPIO / Embedded</div>
+    <div class="skill-chip"><span class="dot"></span>REST APIs</div>
+    <div class="skill-chip"><span class="dot"></span>OAuth2</div>
+    <div class="skill-chip"><span class="dot slate"></span>Git</div>
+    <div class="skill-chip"><span class="dot green"></span>Linux / VPS</div>
+    <div class="skill-chip"><span class="dot"></span>NumPy</div>
+    <div class="skill-chip"><span class="dot green"></span>3D Printing</div>
+    <div class="skill-chip"><span class="dot"></span>PostgreSQL</div>
+  </div>
+</section>
 
-        <a href="embedded/index.html">embedded systems</a>
-        <br><br>
+<hr class="divider" />
 
-    </div>
+<!-- Footer -->
+<footer>
+  <p>Nick McCallum · CS student</p>
+  <div style="display:flex;gap:1.2rem;">
+    <a href="https://github.com/gorillaPet" target="_blank" rel="noopener">github</a>
+    <a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin</a>
+    <a href="mailto:gorillapet@proton.me">email</a>
+  </div>
+</footer>
 
-    <div class="projects-section">
-
-        <h2>work in progress</h2>
-
-        <a href="robo/index.html">robo rover</a>
-        <br><br>
-
-        <a href="hospital/index.html">hospital route optimiser</a>
-
-    </div>
-
-</div>
-
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

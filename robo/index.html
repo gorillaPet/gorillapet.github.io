@@ -1,89 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>robo rover</title>
-
-    <link rel="stylesheet" href="../styles.css">
-
-    <link rel="icon" type="image/x-icon" href="../favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>robo rover — Nick McCallum</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
-
 <body>
-
-<div class="container">
-
-    <div class="project-card">
-
-        <h2>robo rover</h2>
-
-        <div class="tags">
-            <span class="tag">c / arduino ide</span>
-            <span class="tag">mbot ranger</span>
-            <span class="tag">serial comms</span>
-            <span class="tag">tkinter</span>
-            <span class="tag">python-vlc</span>
-            <span class="tag">rtsp streaming</span>
-            <span class="tag">hid / joystick</span>
-        </div>
-
-        <div class="project-row">
-
-            <img
-                class="project-image"
-                src="rover_front.jpg"
-                alt="robo rover"
-                onclick="openLightbox(this.src)">
-
-            <div class="project-text">
-
-                <p>
-                    I recently scored a PXN V3 Pro racing wheel on Telstra points, so I thought - why not use it to drive my MBot Ranger around? The plan is to read the wheel's 16-bit steering axis inputs and convert them to differential drive commands over serial, spinning each wheel proportionally for smooth variable-speed turns. I might knock up a quick prototype in the MBlock IDE first, but that only handles binary steering, so ultimately I'll write it in C and flash it via the Arduino IDE.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-text">
-
-                <p>
-                    The GUI will be Tkinter: an input map, a pitch/yaw diagram, and a live video feed. The feed will be a python-vlc frame pulling an RTSP stream from an IP camera app on a spare phone - the rover's eyes. The goal is something that actually feels immersive, not just watching a robot trundle around a room. No autonomy planned at this stage, this was really just an excuse to make use of the wheel - but there's real scope to build on the MBot's ultrasonic sensor and onboard gyroscope once the remote control loop is solid.
-                </p>
-
-            </div>
-
-            <img
-                class="project-image"
-                src="rover_side.jpg"
-                alt="robo rover"
-                onclick="openLightbox(this.src)">
-
-        </div>
-
+<div class="ticker" aria-hidden="true"><div class="ticker-inner" id="t1"></div></div>
+<nav>
+  <span class="nav-logo"><span class="at">~/</span>nick</span>
+  <ul class="nav-links">
+    <li><a href="../index.html">← back</a></li>
+    <li><a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin ↗</a></li>
+  </ul>
+</nav>
+<div class="section">
+  <a class="back-link" href="../index.html">← all projects</a>
+  <div class="project-page-card">
+    <h1>robo rover <span class="badge wip" style="font-size:11px;vertical-align:middle;">wip</span></h1>
+    <div class="tags">
+      <span class="tag">c / arduino ide</span><span class="tag">mbot ranger</span><span class="tag">serial comms</span><span class="tag">tkinter</span><span class="tag">python-vlc</span><span class="tag">rtsp streaming</span><span class="tag">hid / joystick</span>
     </div>
-
+    <div class="img-row">
+      <img src="rover_front.jpg" alt="robo rover front" onclick="openLightbox(this.src)" />
+      <img src="rover_side.jpg" alt="robo rover side" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="prose">
+      <p>I recently scored a PXN V3 Pro racing wheel on Telstra points, so I thought — why not use it to drive my MBot Ranger around? The plan is to read the wheel's 16-bit steering axis inputs and convert them to differential drive commands over serial, spinning each wheel proportionally for smooth variable-speed turns. I might knock up a quick prototype in the MBlock IDE first, but that only handles binary steering, so ultimately I'll write it in C and flash it via the Arduino IDE.</p>
+      <p>The GUI will be Tkinter: an input map, a pitch/yaw diagram, and a live video feed. The feed will be a python-vlc frame pulling an RTSP stream from an IP camera app on a spare phone — the rover's eyes. The goal is something that actually feels immersive, not just watching a robot trundle around a room. No autonomy planned at this stage, this was really just an excuse to make use of the wheel — but there's real scope to build on the MBot's ultrasonic sensor and onboard gyroscope once the remote control loop is solid.</p>
+    </div>
+  </div>
 </div>
-
+<div class="ticker bottom" aria-hidden="true"><div class="ticker-inner" id="t2"></div></div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
-    <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+  <img id="lightbox-img" src="" alt="" />
 </div>
-
 <script src="../lightbox.js"></script>
-
+<script>
+  const w = ["Forest forget who is first born。","The ape walk but step is missing。","Heaven not ready yet。","He who stare too deep in gorilla mind become not who was before。","The ape teach forgetting but remember confuse itself。","Only blind can see the far close。","Time skip beat。","Before banana there only thought of maybe hunger。","Gorilla shadow too long for today to finish。","Wisdom walk in wrong direction。"].join(" · ");
+  document.getElementById('t1').textContent = w + " · " + w;
+  document.getElementById('t2').textContent = w + " · " + w;
+</script>
 </body>
 </html>

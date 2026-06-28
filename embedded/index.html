@@ -1,93 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>embedded systems</title>
-
-    <link rel="stylesheet" href="../styles.css">
-
-    <link rel="icon" type="image/x-icon" href="../favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>embedded systems — Nick McCallum</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
-
 <body>
-
-<div class="container">
-
-    <div class="project-card">
-
-        <h2>embedded projects</h2>
-
-        <div class="tags">
-            <span class="tag">raspberry pi</span>
-            <span class="tag">python</span>
-            <span class="tag">tkinter</span>
-            <span class="tag">gpio</span>
-            <span class="tag">servo</span>
-            <span class="tag">3d printing</span>
-            <span class="tag">smtp</span>
-        </div>
-
-        <div class="project-row">
-
-            <img
-                class="project-image"
-                src="med_front.jpg"
-                alt="medispense"
-                onclick="openLightbox(this.src)">
-
-            <div class="project-text">
-
-                <p>
-                    "Medispense" was an embedded systems project for a level-200 unit, built using a 3D-printed dispenser housing, a Raspberry Pi, and a servo. It wasn't especially inspired as a concept, but it was my first attempt at building something with an actual GUI alongside embedded hardware - rather than just terminal or serial I/O. A carer sets a dosage schedule through the Tkinter interface, and once medication is due, the patient can dispense via either the physical push button (wired to a GPIO pin) or the on-screen UI. The system also fires an SMTP email when a dose is coming up, and an overdue alert if it gets missed. <a href="https://www.youtube.com/watch?v=Xk1alkbLQ_0" style="color: yellow;">check it out</a>
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-text">
-
-                <p>
-                    The obvious shortcoming is mechanical: the prototype dispenses with a single servo retraction, which gives almost no precision over quantity. A proper version would benefit from a twist-feed mechanism and either an IR sensor or a load cell to confirm exactly one dose has been released. I deliberately avoided over-engineering it - proximity sensors and the like felt like scope creep for a first prototype - but those would be the right next steps.
-                </p>
-
-                <p>
-                    People hate Tkinter but I think it's neat. It doesn't have to look like shovelware from 1996. (See, this looks like shovelware from 2001!)
-                </p>
-
-            </div>
-
-            <img
-                class="project-image"
-                src="med_side.jpg"
-                alt="medispense"
-                onclick="openLightbox(this.src)">
-
-        </div>
-
+<div class="ticker" aria-hidden="true"><div class="ticker-inner" id="t1"></div></div>
+<nav>
+  <span class="nav-logo"><span class="at">~/</span>nick</span>
+  <ul class="nav-links">
+    <li><a href="../index.html">← back</a></li>
+    <li><a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin ↗</a></li>
+  </ul>
+</nav>
+<div class="section">
+  <a class="back-link" href="../index.html">← all projects</a>
+  <div class="project-page-card">
+    <h1>embedded projects — medispense</h1>
+    <div class="tags">
+      <span class="tag">raspberry pi</span><span class="tag">python</span><span class="tag">tkinter</span><span class="tag">gpio</span><span class="tag">servo</span><span class="tag">3d printing</span><span class="tag">smtp</span>
     </div>
-
+    <div class="img-row">
+      <img src="med_front.jpg" alt="medispense front" onclick="openLightbox(this.src)" />
+      <img src="med_side.jpg" alt="medispense side" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="prose">
+      <p>"Medispense" was an embedded systems project for a level-200 unit, built using a 3D-printed dispenser housing, a Raspberry Pi, and a servo. It wasn't especially inspired as a concept, but it was my first attempt at building something with an actual GUI alongside embedded hardware — rather than just terminal or serial I/O. A carer sets a dosage schedule through the Tkinter interface, and once medication is due, the patient can dispense via either the physical push button (wired to a GPIO pin) or the on-screen UI. The system also fires an SMTP email when a dose is coming up, and an overdue alert if it gets missed. <a href="https://www.youtube.com/watch?v=Xk1alkbLQ_0" target="_blank" rel="noopener">check it out ↗</a></p>
+      <p>The obvious shortcoming is mechanical: the prototype dispenses with a single servo retraction, which gives almost no precision over quantity. A proper version would benefit from a twist-feed mechanism and either an IR sensor or a load cell to confirm exactly one dose has been released. I deliberately avoided over-engineering it — proximity sensors and the like felt like scope creep for a first prototype — but those would be the right next steps.</p>
+      <p>People hate Tkinter but I think it's neat. It doesn't have to look like shovelware from 1996. (See, this looks like shovelware from 2001!)</p>
+    </div>
+  </div>
 </div>
-
+<div class="ticker bottom" aria-hidden="true"><div class="ticker-inner" id="t2"></div></div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
-    <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+  <img id="lightbox-img" src="" alt="" />
 </div>
-
 <script src="../lightbox.js"></script>
-
+<script>
+  const w = ["Forest forget who is first born。","The ape walk but step is missing。","Heaven not ready yet。","He who stare too deep in gorilla mind become not who was before。","The ape teach forgetting but remember confuse itself。","Only blind can see the far close。","Time skip beat。","Before banana there only thought of maybe hunger。","Gorilla shadow too long for today to finish。","Wisdom walk in wrong direction。"].join(" · ");
+  document.getElementById('t1').textContent = w + " · " + w;
+  document.getElementById('t2').textContent = w + " · " + w;
+</script>
 </body>
 </html>

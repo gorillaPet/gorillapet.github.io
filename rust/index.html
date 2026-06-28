@@ -1,87 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>rust slot machine</title>
-
-    <link rel="stylesheet" href="../styles.css">
-
-    <link rel="icon" type="image/x-icon" href="../favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rust slot machine — Nick McCallum</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
-
 <body>
-
-<div class="container">
-
-    <div class="project-card">
-
-        <h2>rust slot machine</h2>
-
-        <div class="tags">
-            <span class="tag">in-game electronics</span>
-            <span class="tag">logic gates</span>
-            <span class="tag">rand switches</span>
-            <span class="tag">bitflops</span>
-            <span class="tag">combinational logic</span>
-        </div>
-
-        <div class="project-row">
-
-            <img
-                class="project-image"
-                src="rust_front.jpg"
-                alt="rust slot machine"
-                onclick="openLightbox(this.src)">
-
-            <div class="project-text">
-
-                <p>
-                    When I started studying CS 2.5 years ago, it was so I could make more technically impressive ways of annoying my friends. It started out accidentally learning some Python to script a visual romance novel starring my buddy Jake, and for better or for worse it snowballed to the point where I now know what Gram-Schmidt orthogonalisation is. I'm definitely a lot better at thinking about systems and flow control - and while the Rust slot machine isn't pure CS, it's my magnum opus and the logical conclusion of my study. Using the in-built electronics system in the game Rust, I designed, on a live PvP server mind you, a fully functional single-line slot machine with a variable pay table.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-text">
-
-                <p>
-                    I played Rust back in 2020 and loved the electronics system, but anything beyond a sun-activated light switch was pure magic to me. Coming back recently, I realised the game has XOR and AND gates, Rand switches, and bitflop latches. Paired with the custom neon signs and automated resource dispensers, I had just enough to build something real. Drop money in the input box, the circuit activates, waits for a button press, then kicks off the Rand sequence. Some crude if-else logic assigns symbol probabilities - common symbols appear more often, and three of the rarer ones pay out a higher multiplier. I would love to post a video, but as a thank you for enriching the server economy, a kindly gentleman flew over my base in a scrap helicopter and blew the casino up with a rocket launcher. And people say Rust is toxic?!
-                </p>
-
-            </div>
-
-            <img
-                class="project-image"
-                src="rust_side.jpg"
-                alt="rust slot machine"
-                onclick="openLightbox(this.src)">
-
-        </div>
-
+<div class="ticker" aria-hidden="true"><div class="ticker-inner" id="t1"></div></div>
+<nav>
+  <span class="nav-logo"><span class="at">~/</span>nick</span>
+  <ul class="nav-links">
+    <li><a href="../index.html">← back</a></li>
+    <li><a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin ↗</a></li>
+  </ul>
+</nav>
+<div class="section">
+  <a class="back-link" href="../index.html">← all projects</a>
+  <div class="project-page-card">
+    <h1>rust slot machine</h1>
+    <div class="tags">
+      <span class="tag">in-game electronics</span><span class="tag">logic gates</span><span class="tag">rand switches</span><span class="tag">bitflops</span><span class="tag">combinational logic</span>
     </div>
-
+    <div class="img-row">
+      <img src="rust_front.jpg" alt="rust slot machine front" onclick="openLightbox(this.src)" />
+      <img src="rust_side.jpg" alt="rust slot machine side" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="prose">
+      <p>When I started studying CS 2.5 years ago, it was so I could make more technically impressive ways of annoying my friends. It started out accidentally learning some Python to script a visual romance novel starring my buddy Jake, and for better or for worse it snowballed to the point where I now know what Gram-Schmidt orthogonalisation is. I'm definitely a lot better at thinking about systems and flow control — and while the Rust slot machine isn't pure CS, it's my magnum opus and the logical conclusion of my study. Using the in-built electronics system in the game Rust, I designed, on a live PvP server mind you, a fully functional single-line slot machine with a variable pay table.</p>
+      <p>I played Rust back in 2020 and loved the electronics system, but anything beyond a sun-activated light switch was pure magic to me. Coming back recently, I realised the game has XOR and AND gates, Rand switches, and bitflop latches. Paired with the custom neon signs and automated resource dispensers, I had just enough to build something real. Drop money in the input box, the circuit activates, waits for a button press, then kicks off the Rand sequence. Some crude if-else logic assigns symbol probabilities — common symbols appear more often, and three of the rarer ones pay out a higher multiplier.</p>
+      <p>I would love to post a video, but as a thank you for enriching the server economy, a kindly gentleman flew over my base in a scrap helicopter and blew the casino up with a rocket launcher. And people say Rust is toxic?!</p>
+    </div>
+  </div>
 </div>
-
+<div class="ticker bottom" aria-hidden="true"><div class="ticker-inner" id="t2"></div></div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
-    <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+  <img id="lightbox-img" src="" alt="" />
 </div>
-
 <script src="../lightbox.js"></script>
-
+<script>
+  const w = ["Forest forget who is first born。","The ape walk but step is missing。","Heaven not ready yet。","He who stare too deep in gorilla mind become not who was before。","The ape teach forgetting but remember confuse itself。","Only blind can see the far close。","Time skip beat。","Before banana there only thought of maybe hunger。","Gorilla shadow too long for today to finish。","Wisdom walk in wrong direction。"].join(" · ");
+  document.getElementById('t1').textContent = w + " · " + w;
+  document.getElementById('t2').textContent = w + " · " + w;
+</script>
 </body>
 </html>

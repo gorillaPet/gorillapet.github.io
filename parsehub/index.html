@@ -1,89 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>parsehub casino</title>
-
-    <link rel="stylesheet" href="../styles.css">
-
-    <link rel="icon" type="image/x-icon" href="../favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>parsehub casino — Nick McCallum</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
-
 <body>
-
-<div class="container">
-
-    <div class="project-card">
-
-        <h2>parsehub casino</h2>
-
-        <div class="tags">
-            <span class="tag">python</span>
-            <span class="tag">flask</span>
-            <span class="tag">discord.py</span>
-            <span class="tag">sqlite</span>
-            <span class="tag">oauth2</span>
-            <span class="tag">numpy</span>
-            <span class="tag">vps</span>
-        </div>
-
-        <div class="project-row">
-
-            <img
-                class="project-image"
-                src="ph_front.jpg"
-                alt="parsehub casino"
-                onclick="openLightbox(this.src)">
-
-            <div class="project-text">
-
-                <p>
-                    My WoW guild love the in-game gambling addon, so I thought it could be fun for my first real project to create an Aviator-style gambling game I could manage using a Discord bot. This was the first Flask app I built - I specifically wanted to use Discord OAuth2 for login, SQLite to store credit balances, and have the whole thing run off slash commands.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-text">
-
-                <p>
-                    I used NumPy's probabilistic distribution to generate a crash multiplier centred at 1.3x, which seemed like the sweet spot - until everyone got bored playing for fake coins, so I jacked it up to 5–6x for some properly dramatic rounds. Players register with /register, authenticate via their Discord account, and place bets during the open window. Cash out before the crash and you get your bet back multiplied by whatever the number reads at that moment. This is riddled with design flaws, UI bugs, and at least one glaring security issue (can a user run their own bot instance and write to the centralised database? probably), but it was a really fun first crack at tying a web app to a chat platform, and the guys seemed to enjoy it. Hosted on my VPS, which has since become the place I keep most of my projects and sites. <a href="https://parsehub.online" style="color: yellow;">check it out</a>
-                </p>
-
-            </div>
-
-            <img
-                class="project-image"
-                src="ph_side.jpg"
-                alt="parsehub casino"
-                onclick="openLightbox(this.src)">
-
-        </div>
-
+<div class="ticker" aria-hidden="true"><div class="ticker-inner" id="t1"></div></div>
+<nav>
+  <span class="nav-logo"><span class="at">~/</span>nick</span>
+  <ul class="nav-links">
+    <li><a href="../index.html">← back</a></li>
+    <li><a href="https://www.linkedin.com/in/nick-mccallum-587848412/" target="_blank" rel="noopener">linkedin ↗</a></li>
+  </ul>
+</nav>
+<div class="section">
+  <a class="back-link" href="../index.html">← all projects</a>
+  <div class="project-page-card">
+    <h1>parsehub casino</h1>
+    <div class="tags">
+      <span class="tag">python</span><span class="tag">flask</span><span class="tag">discord.py</span><span class="tag">sqlite</span><span class="tag">oauth2</span><span class="tag">numpy</span><span class="tag">vps</span>
     </div>
-
+    <div class="img-row">
+      <img src="ph_front.jpg" alt="parsehub casino front" onclick="openLightbox(this.src)" />
+      <img src="ph_side.jpg" alt="parsehub casino side" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="prose">
+      <p>My WoW guild love the in-game gambling addon, so I thought it could be fun for my first real project to create an Aviator-style gambling game I could manage using a Discord bot. This was the first Flask app I built — I specifically wanted to use Discord OAuth2 for login, SQLite to store credit balances, and have the whole thing run off slash commands.</p>
+      <p>I used NumPy's probabilistic distribution to generate a crash multiplier centred at 1.3x, which seemed like the sweet spot — until everyone got bored playing for fake coins, so I jacked it up to 5–6x for some properly dramatic rounds. Players register with /register, authenticate via their Discord account, and place bets during the open window. Cash out before the crash and you get your bet back multiplied by whatever the number reads at that moment.</p>
+      <p>This is riddled with design flaws, UI bugs, and at least one glaring security issue (can a user run their own bot instance and write to the centralised database? probably), but it was a really fun first crack at tying a web app to a chat platform, and the guys seemed to enjoy it. Hosted on my VPS, which has since become the place I keep most of my projects and sites. <a href="https://parsehub.online" target="_blank" rel="noopener">check it out ↗</a></p>
+    </div>
+  </div>
 </div>
-
+<div class="ticker bottom" aria-hidden="true"><div class="ticker-inner" id="t2"></div></div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
-    <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="close">✕</button>
+  <img id="lightbox-img" src="" alt="" />
 </div>
-
 <script src="../lightbox.js"></script>
-
+<script>
+  const w = ["Forest forget who is first born。","The ape walk but step is missing。","Heaven not ready yet。","He who stare too deep in gorilla mind become not who was before。","The ape teach forgetting but remember confuse itself。","Only blind can see the far close。","Time skip beat。","Before banana there only thought of maybe hunger。","Gorilla shadow too long for today to finish。","Wisdom walk in wrong direction。"].join(" · ");
+  document.getElementById('t1').textContent = w + " · " + w;
+  document.getElementById('t2').textContent = w + " · " + w;
+</script>
 </body>
 </html>
